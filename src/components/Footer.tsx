@@ -1,4 +1,5 @@
-import { Mountain, MapPin, Mail, Phone, Instagram } from "lucide-react";
+import { MapPin, Mail, Phone, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-nature-deep px-6 py-16">
