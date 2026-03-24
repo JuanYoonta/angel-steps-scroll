@@ -68,14 +68,18 @@ const Navbar = () => {
             </span>
           </a>
 
-          {/* Right: Hamburger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="relative z-[60] text-primary-foreground"
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Right: Hamburger (only show when menu is closed) */}
+          {!menuOpen && (
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="text-primary-foreground"
+              aria-label="Open menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          )}
+          {/* Spacer when menu is open so layout doesn't shift */}
+          {menuOpen && <div className="w-6" />}
         </div>
       </motion.nav>
 
@@ -89,6 +93,14 @@ const Navbar = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
+            {/* Close button fixed top-right */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="fixed right-6 top-4 z-[60] p-2 text-primary-foreground transition-colors hover:text-accent"
+              aria-label="Close menu"
+            >
+              <X className="h-7 w-7" />
+            </button>
             <motion.ul
               className="flex flex-col items-center gap-8"
               initial="closed"
