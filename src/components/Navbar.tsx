@@ -40,7 +40,7 @@ const Navbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
           {/* Left: Language selector */}
           <div className="flex items-center gap-1">
             <button
