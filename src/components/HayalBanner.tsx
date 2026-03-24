@@ -14,7 +14,7 @@ const HayalBanner = () => {
       {/* Parallax dark background */}
       <motion.div className="absolute inset-[-20%] h-[140%] w-full" style={{ y: bgY }}>
         <div className="h-full w-full bg-gradient-to-r from-emerald-950 via-emerald-900 to-teal-900" />
-        <div className="absolute inset-0 bg-[url('https://placehold.co/1920x1080/0a1f12/0a1f12')] bg-cover bg-center opacity-40" />
+        <img src="https://placehold.co/1920x1080/0a1f12/0a1f12" alt="" className="absolute inset-0 h-full w-full object-cover opacity-40" />
       </motion.div>
       <div className="absolute inset-0 bg-black/30" />
 

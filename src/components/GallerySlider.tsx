@@ -40,12 +40,12 @@ const GallerySlider = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="relative h-64 w-72 sm:h-80 sm:w-96">
-                <div className="h-full w-full bg-gradient-to-br from-emerald-800 to-teal-900" />
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-800 to-teal-900" />
                 <img
                   src={slide.src}
                   alt={slide.alt}
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-40"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
             </motion.div>
