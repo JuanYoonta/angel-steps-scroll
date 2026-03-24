@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -56,11 +56,28 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
   body {
     @apply bg-background text-foreground font-body antialiased;
+    cursor: none;
+  }
+  @media (max-width: 767px) {
+    body {
+      cursor: auto;
+    }
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+  }
+  a, button {
+    cursor: none;
+  }
+  @media (max-width: 767px) {
+    a, button {
+      cursor: auto;
+    }
   }
 }
 

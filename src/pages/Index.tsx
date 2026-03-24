@@ -1,3 +1,5 @@
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import VideoSection from "@/components/VideoSection";
@@ -12,20 +14,23 @@ import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
-  <main className="overflow-x-hidden">
-    <Navbar />
-    <HeroSection />
-    <VideoSection />
-    <IntroSection />
-    <AtraccionesSection />
-    <GallerySlider />
-    <StoriesSection />
-    <HayalBanner />
-    <PlanesSection />
-    <ContactSection />
-    <MapSection />
-    <Footer />
-  </main>
+  <SmoothScroll>
+    <CustomCursor />
+    <main className="overflow-x-hidden">
+      <Navbar />
+      <HeroSection />
+      <VideoSection />
+      <IntroSection />
+      <AtraccionesSection />
+      <GallerySlider />
+      <StoriesSection />
+      <HayalBanner />
+      <PlanesSection />
+      <ContactSection />
+      <MapSection />
+      <Footer />
+    </main>
+  </SmoothScroll>
 );
 
 export default Index;
