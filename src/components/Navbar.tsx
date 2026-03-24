@@ -64,7 +64,7 @@ const Navbar = () => {
 
           {/* Center: Logo */}
           <a href="#hero" className="absolute left-1/2 -translate-x-1/2">
-            <img src={logo} alt="Paso del Ángel" className="h-[120px] w-auto object-contain" />
+            <img src={logo} alt="Paso del Ángel" className="w-[120px] h-auto object-contain" />
           </a>
 
           {/* Right: Hamburger (only show when menu is closed) */}
