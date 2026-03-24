@@ -68,14 +68,18 @@ const Navbar = () => {
             </span>
           </a>
 
-          {/* Right: Hamburger */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="relative z-[60] text-primary-foreground"
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Right: Hamburger (only show when menu is closed) */}
+          {!menuOpen && (
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="text-primary-foreground"
+              aria-label="Open menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          )}
+          {/* Spacer when menu is open so layout doesn't shift */}
+          {menuOpen && <div className="w-6" />}
         </div>
       </motion.nav>
 
