@@ -11,11 +11,12 @@ const HeroSection = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   return (
-    <section id="hero" ref={ref} className="relative h-screen overflow-hidden">
-      {/* Background placeholder */}
-      <motion.div className="absolute inset-0" style={{ y }}>
+    <section id="hero" ref={ref} className="relative min-h-[100dvh] overflow-hidden">
+      {/* Parallax background */}
+      <motion.div className="absolute inset-0" style={{ y, scale }}>
         <div className="h-full w-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900" />
         <div className="absolute inset-0 bg-[url('https://placehold.co/1920x1080/1a3a2a/1a3a2a')] bg-cover bg-center opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
@@ -23,7 +24,7 @@ const HeroSection = () => {
 
       {/* Hero content */}
       <motion.div
-        className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-6 pb-32 text-center"
         style={{ opacity }}
       >
         <motion.p
@@ -55,7 +56,7 @@ const HeroSection = () => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-28 left-1/2 -translate-x-1/2 md:bottom-32"
+          className="absolute bottom-36 left-1/2 -translate-x-1/2 md:bottom-28"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
@@ -70,41 +71,21 @@ const HeroSection = () => {
         <form className="mx-auto flex max-w-6xl flex-col items-stretch gap-3 px-4 py-4 md:flex-row md:items-center md:gap-4 md:py-3">
           <div className="flex flex-1 items-center gap-2 rounded-lg bg-primary-foreground/10 px-3 py-2">
             <User className="h-4 w-4 flex-shrink-0 text-accent" />
-            <input
-              type="text"
-              placeholder="Nombre"
-              className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none"
-            />
+            <input type="text" placeholder="Nombre" className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none" />
           </div>
           <div className="flex flex-1 items-center gap-2 rounded-lg bg-primary-foreground/10 px-3 py-2">
             <Mail className="h-4 w-4 flex-shrink-0 text-accent" />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none"
-            />
+            <input type="email" placeholder="Email" className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none" />
           </div>
           <div className="flex flex-1 items-center gap-2 rounded-lg bg-primary-foreground/10 px-3 py-2">
             <Phone className="h-4 w-4 flex-shrink-0 text-accent" />
-            <input
-              type="tel"
-              placeholder="Teléfono"
-              className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none"
-            />
+            <input type="tel" placeholder="Teléfono" className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none" />
           </div>
           <div className="flex w-full items-center gap-2 rounded-lg bg-primary-foreground/10 px-3 py-2 md:w-32">
             <Ticket className="h-4 w-4 flex-shrink-0 text-accent" />
-            <input
-              type="number"
-              min={1}
-              placeholder="Tickets"
-              className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none"
-            />
+            <input type="number" min={1} placeholder="Tickets" className="w-full bg-transparent text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none" />
           </div>
-          <button
-            type="submit"
-            className="rounded-full bg-accent px-8 py-2.5 text-sm font-bold uppercase tracking-wider text-accent-foreground transition-transform hover:scale-105"
-          >
+          <button type="submit" className="rounded-full bg-accent px-8 py-2.5 text-sm font-bold uppercase tracking-wider text-accent-foreground transition-transform hover:scale-105">
             Reservar
           </button>
         </form>
