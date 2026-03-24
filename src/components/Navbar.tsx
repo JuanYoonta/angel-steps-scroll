@@ -93,6 +93,14 @@ const Navbar = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
+            {/* Close button fixed top-right */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="fixed right-6 top-4 z-[60] p-2 text-primary-foreground transition-colors hover:text-accent"
+              aria-label="Close menu"
+            >
+              <X className="h-7 w-7" />
+            </button>
             <motion.ul
               className="flex flex-col items-center gap-8"
               initial="closed"
