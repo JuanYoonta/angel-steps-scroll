@@ -40,7 +40,7 @@ const Navbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 h-[120px]">
           {/* Left: Language selector */}
           <div className="flex items-center gap-1">
             <button
@@ -64,7 +64,7 @@ const Navbar = () => {
 
           {/* Center: Logo */}
           <a href="#hero" className="absolute left-1/2 -translate-x-1/2">
-            <img src={logo} alt="Paso del Ángel" className="w-[120px] h-auto object-contain" />
+            <img src={logo} alt="Paso del Ángel" className="w-[92px] h-auto object-contain" />
           </a>
 
           {/* Right: Hamburger (only show when menu is closed) */}
