@@ -91,7 +91,7 @@ const Footer = () => (
 
       <div className="mt-6 flex flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-xs text-nature-deep-foreground/40">
-          © {new Date().getFullYear()} El Paso del Ángel®. Todos los derechos reservados..
+          © {new Date().getFullYear()} El Paso del Ángel®. Todos los derechos reservados
         </p>
         <p className="text-xs text-nature-deep-foreground/40">
           Hecho con ♥ en Boyacá, Colombia
