@@ -35,7 +35,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          Santa Sofía, Boyacá · Destino Natural
+          Santa Sofía, Boyacá - Destino Natural
         </motion.p>
 
         <motion.h1
