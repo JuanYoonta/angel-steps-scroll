@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { User, Mail, Phone, Ticket } from "lucide-react";
+import heroImage from "../assets/PasoDelAngel_Home_IMG01.jpg";
 
 const HeroSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,8 +18,7 @@ const HeroSection = () => {
     <section id="hero" ref={ref} className="relative min-h-[100dvh] overflow-hidden">
       {/* Parallax background */}
       <motion.div className="absolute inset-0 h-full w-full" style={{ y, scale }}>
-        <div className="h-full w-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900" />
-        <img src="https://placehold.co/1920x1080/1a3a2a/1a3a2a" alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+        <img src={heroImage} alt="Paso del Ángel" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70" />
       </motion.div>
 
